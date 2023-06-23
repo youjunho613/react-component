@@ -1,34 +1,36 @@
 import { useState } from "react";
-import { OverflowDiv, StMenuItem, StInput, StBox, SpanIcon } from "./StSelect";
+import * as St from "./StSelect";
 
 const Select = () => {
   const [data, setData] = useState("NONE");
 
-  const onClickHandler = event => {
+  const MenuItemHandler = event => {
     setData(event.target.value);
   };
 
+  const openHandler = () => {};
+
   return (
-    <OverflowDiv>
-      <StBox>
-        <StInput value={data} disabled></StInput>
-        <SpanIcon></SpanIcon>
-      </StBox>
-      <StBox>
-        <StMenuItem position={0} value={"리액트"} onClick={onClickHandler}>
+    <St.OverflowDiv>
+      <St.StBox>
+        <St.StInput value={data} disabled onClick={openHandler}></St.StInput>
+        <St.SpanIcon></St.SpanIcon>
+      </St.StBox>
+      <St.StBox>
+        <St.StMenuItem position={0} value={"리액트"} onClick={MenuItemHandler}>
           리액트
-        </StMenuItem>
-        <StMenuItem position={1} value={"자바"} onClick={onClickHandler}>
+        </St.StMenuItem>
+        <St.StMenuItem position={1} value={"자바"} onClick={MenuItemHandler}>
           자바
-        </StMenuItem>
-        <StMenuItem position={2} value={"스프링"} onClick={onClickHandler}>
+        </St.StMenuItem>
+        <St.StMenuItem position={2} value={"스프링"} onClick={MenuItemHandler}>
           스프링
-        </StMenuItem>
-        <StMenuItem position={3} value={"리액트네이티브"} onClick={onClickHandler}>
+        </St.StMenuItem>
+        <St.StMenuItem position={3} value={"리액트네이티브"} onClick={MenuItemHandler}>
           리액트네이티브
-        </StMenuItem>
-      </StBox>
-    </OverflowDiv>
+        </St.StMenuItem>
+      </St.StBox>
+    </St.OverflowDiv>
   );
 };
 

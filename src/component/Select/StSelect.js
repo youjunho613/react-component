@@ -27,7 +27,6 @@ export const StInput = styled.input`
     content: "";
   } */
 `;
-// position: relative;
 
 export const SpanIcon = styled.span`
   position: absolute;
