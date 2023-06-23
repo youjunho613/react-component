@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { StTitle } from "component/Common/commonStComponents";
 import { StInput, StLabel } from "./StInput";
 import { StButton } from "component/Button/StButton";
 
@@ -35,7 +34,6 @@ const Input = () => {
 
   return (
     <div>
-      <StTitle>input</StTitle>
       <form onSubmit={onSubmitHandler}>
         <StLabel htmlFor="title">이름</StLabel>
         <StInput type="text" value={title} ref={titleRef} onChange={onTitleHandler} />
